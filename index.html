@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>Resume Reviser</title>
+		<title>Resume Builder Dashboard</title>
         <link rel="icon" href="./images/vicon.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,7 +12,7 @@
 	<body>
 		<!-- Header -->
             <nav class="navbar  navbar-expand-lg sticky-top navbar-light bg-light" >
-                <a class="navbar-brand" href="#"><b>Resume</b></a>
+                <a class="navbar-brand" href="#"><b>Resume Builder</b></a>
                 <div class="navbar-nav">
                     <a class="nav-item nav-link active" href="#">Home</a>
 				    <a class="nav-item nav-link" href="#">Faq</a>
@@ -26,7 +26,8 @@
 				<div style="text-align: center" >
                         <h2 style=" margin-top: 60px;">Hello Job Seeker!</h2>
 					<p>Create the perfect Resume</p>
-                    <button type="button" class="btn btn-primary">Create Resume</button>
+                    <!-- Button opens a dialog box for demonstration purposes when clicked (see below) -->
+                    <button id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog" class="btn btn-primary">Create Resume</button>
 
 				</div>
 			</section>
@@ -52,9 +53,37 @@
 				</div>
                 <br><br><br><br>
 			</div>
+        
+            <!--<div id="dialog" title="Basic dialog" class="">
+              <p>Let's get started creating your resume.</p>
+            </div>-->
+        
+            <!-- Example Modal (Dialog Box) -->
+            <div class="modal fade" id="dialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Welcome to the Resume Builder</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Let's get started!
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <a href="resumebuilder.html"><button type="button" class="btn btn-primary">Continue</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
 		<!-- Scripts -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="js/app.js"></script>
 <!--            <script src="assets/js/main.js"></script>-->
         
 	</body>
