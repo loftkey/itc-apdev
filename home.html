@@ -23,27 +23,32 @@
 			
 		<!-- Main -->
 			<section id="main" class="wrapper">
-				<div style="text-align: center" >
-                        <h2 style=" margin-top: 60px;">Hello Job Seeker!</h2>
-					<p>Create the perfect Resume by selecting a template below</p>
-                    <!-- Button opens a dialog box for demonstration purposes when clicked (see below) -->
-<!--                    <button id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog" class="btn btn-primary">Create Resume</button>-->
-                    <br>
-				</div>
-                <div class="container">
-                      <div class="row">
-                        <div class="col-sm">
-                          <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp1.png" width="100%"/></a>
-                        </div>
-                        <div class="col-sm">
-                          <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp2.png" width="100%"/></a>
-                        </div>
-                        <div class="col-sm">
-                          <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp3.png" width="100%"/></a>
-                        </div>
-                      </div>
+                <div id="myDIV">
+                    <div style="text-align: center" >
+                            <h2 style=" margin-top: 60px;">Hello Job Seeker!</h2>
+                        <p>Create the perfect Resume by selecting a template below</p>
+                        <!-- Button opens a dialog box for demonstration purposes when clicked (see below) -->
+    <!--                    <button id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog" class="btn btn-primary">Create Resume</button>-->
+                        <br>
                     </div>
-
+                    <div class="container">
+                          <div class="row">
+                            <div class="col-sm">
+                              <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp1.png" width="100%"/></a>
+                            </div>
+                            <div class="col-sm">
+                              <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp2.png" width="100%"/></a>
+                            </div>
+                            <div class="col-sm">
+                              <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp3.png" width="100%"/></a>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+                <div style="margin-left: 5%; margin-top: 5%">
+                    <p id="output1"></p><br>
+                    <p id="output2"></p>
+                </div>
 			</section>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<!-- Footer -->
@@ -87,20 +92,20 @@
                       <form>
                       <div class="form-row">
                         <div class="col">
-                          <input type="text" class="form-control" placeholder="First name">
+                          <input id="first_name" type="text" class="form-control" placeholder="First name">
                         </div>
                         <div class="col">
-                          <input type="text" class="form-control" placeholder="Last name">
+                          <input id="last_name" type="text" class="form-control" placeholder="Last name">
                         </div>
                       </div>
                     </form><br>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <input type="email" class="form-control" id="e_mail" placeholder="name@example.com">
                       </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog2" data-dismiss="modal"><button type="button" class="btn btn-primary">Continue</button></a>
+                    <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog2" data-dismiss="modal" onclick="myFunction1()"><button type="button" class="btn btn-primary">Continue</button></a>
                   </div>
                 </div>
               </div>
@@ -128,7 +133,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="resumebuilder.html"><button type="button" class="btn btn-primary">Continue</button></a>
+                    <a onclick="myFunction2()" data-dismiss="modal"><button type="button" class="btn btn-primary">Continue</button></a>
                   </div>
                 </div>
               </div>

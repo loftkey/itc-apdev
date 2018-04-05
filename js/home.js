@@ -25,3 +25,23 @@ function createModal() {
         </div>
       </div>*/
 }
+var firstName = "First Name";
+var lastName = "First Name";
+var eMail = "email@domain.com";
+
+function myFunction1()
+{
+    firstName = document.getElementById("first_name").value;
+    lastName = document.getElementById("last_name").value; 
+    eMail = document.getElementById("e_mail").value; 
+}
+function myFunction2() {
+     var x = document.getElementById("myDIV");
+     if (x.style.display === "none") {
+         x.style.display = "block";
+     } else {
+         x.style.display = "none";
+     }
+     document.getElementById("output1").innerHTML = firstName+" "+lastName;
+     document.getElementById("output2").innerHTML = eMail;
+}
