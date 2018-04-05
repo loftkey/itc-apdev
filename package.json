@@ -1,0 +1,25 @@
+{
+  "name": "itc-apdev",
+  "version": "1.0.0",
+  "description": "A resume building web app built on Javascript",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loftkey/itc-apdev.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "CSUSB ITC App Dev Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loftkey/itc-apdev/issues"
+  },
+  "homepage": "https://github.com/loftkey/itc-apdev#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
