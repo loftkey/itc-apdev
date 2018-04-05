@@ -22,19 +22,59 @@
                     <a class="nav-item nav-link" href="#">About</a>
                 </div>
             </nav>
-         <div style="margin-left: 5%; margin-right: 50%; margin-top: 3%">
-        <div class="form-group" >
-          <label for="comment">Summary:</label>
-          
-            <textarea class="form-control" rows="5" id="summary"></textarea>
-          
-        </div>
-        <br><br><br>
+        <!-- End Header -->
+        
+        
+        <!-- Start of Resume Template design -->
+    <div class="paper">
+        
+        <a id="edit_resume_header" type="button" data-toggle="modal" href="#resume_header_dialog">Click to edit header info</a>
+
         <div class="word-content">
-            <p>content I am</p>
+            <style>
+                .font-wrapper {
+                    font-family: Arial;
+                }
+                h1 {
+                    text-align: center;
+                }
+                p {
+                    font-size: 12pt;
+                }
+                table {
+                    font-family: Arial;
+                }
+                tr {
+                    width: 6.4in;
+                }
+                td {
+                    width: 3.25in;
+                }
+                td.rt {
+                    text-align: right;
+                }
+            </style>
+            <div class="font-wrapper">
+            <div id="resume_header">
+                <h1 id="resume_name">Your Name</h1>
+                <table>
+                    <tr>
+                        <td><p id="resume_email">your.email@address.com</p></td>
+                        <td class="rt"><p id="resume_phone">123.456.7890</p></td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <p>Add an executive summary to highlight your skills, background, and character. Not too long, but enough for your future employer to get to know you.</p>
+            </div>
         </div>
+        
         <a class="word-export" href="javascript:void(0)">Export to Word (.doc)</a>
-        </div>
+        
+    </div>
+    <!-- End of Resume Template design -->
+        
+        
         <!-- Scripts -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
