@@ -42,6 +42,15 @@ function myFunction2() {
      } else {
          x.style.display = "none";
      }
+     var y = document.getElementById("myDoc");
+    if (y.style.display === "none") {
+         y.style.display = "block";
+     } else {
+         y.style.display = "none";
+     }
      document.getElementById("output1").innerHTML = firstName+" "+lastName;
      document.getElementById("output2").innerHTML = eMail;
 }
+$('.word-export').click(function(events){
+                $('.word-content').wordExport();
+});
