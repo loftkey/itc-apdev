@@ -7,3 +7,16 @@
     top: 3em;
     right: 0;
 }
+
+.paper {
+    box-shadow: 0px 0px 10px gray;
+    /*margin-left: 5%; margin-right: 50%; margin-top: 3%;*/
+    width: 8.5in;
+    height: 11in;
+    margin: 5em auto;
+    padding: 2em;
+}
+
+.paper h1 {
+    text-align: center;
+}
