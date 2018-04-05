@@ -8,7 +8,6 @@
     
 ## Libraries in use
 * JQuery
-* ~JQuery UI~ (probably replacing with Twitter Bootstrap action attributes)
 * Twitter Bootstrap
 
 ## Resources
@@ -23,7 +22,7 @@
     * OfficeGen: `npm install officegen -g`
 3. Clone the GitHub repo to your local machine using your preferred Git client
 4. Using the command prompt (Node command prompt for Windows), change directory into the cloned Git repo
-5. Start the NodeJS server with `node js/main.js`
+5. Start the NodeJS server with `node main.js`
 6. Navigate to `localhost:8081` in your favorite browser to view the current webpage
 7. Use a text editor to start working on the Javascript code and refresh the browser
 8. Restart the NodeJS server only if updating core server code (such as connection requests and similar events)
