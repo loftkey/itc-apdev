@@ -14,47 +14,67 @@
 		<!-- Header -->
        
             <nav class="navbar  navbar-expand-lg sticky-top navbar-light bg-light" >
-                <a class="navbar-brand" href="home.html"><b>Resume Builder</b></a>
+                <a class="navbar-brand" href="index.html"><b>Resume Builder</b></a>
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="home.html">Home</a>
-				    <a class="nav-item nav-link" href="faq.html">Faq</a>
-                    <a class="nav-item nav-link" href="contact.html">Contact</a>
-                    <a class="nav-item nav-link" href="about.html">About</a>
+                    <a class="nav-item nav-link active" href="#">Home</a>
+				    <a class="nav-item nav-link" href="#">Faq</a>
+                    <a class="nav-item nav-link" href="#">Contact</a>
+                    <a class="nav-item nav-link" href="#">About</a>
                 </div>
             </nav>
-         <div style="margin-left: 5%; margin-right: 50%; margin-top: 3%">
-        <div class="form-group" >
-          <label for="comment">Summary:</label>
-          
-            <textarea class="form-control" rows="5" id="summary"></textarea>
-          
-        </div>
-        <br><br><br>
-        <div class="word-content">
-            <p>content I am</p>
+        <!-- End Header -->
+        
+        
+        <!-- Start of Resume Template design -->
+    <div class="paper">
+        
+        <a id="edit_resume_header" type="button" data-toggle="modal" href="#resume_header_dialog">Click to edit header info</a>
 
+        <div class="word-content">
+            <style>
+                .font-wrapper {
+                    font-family: Arial;
+                }
+                h1 {
+                    text-align: center;
+                }
+                p {
+                    font-size: 12pt;
+                }
+                table {
+                    font-family: Arial;
+                }
+                tr {
+                    width: 6.4in;
+                }
+                td {
+                    width: 3.25in;
+                }
+                td.rt {
+                    text-align: right;
+                }
+            </style>
+            <div class="font-wrapper">
+            <div id="resume_header">
+                <h1 id="resume_name">Your Name</h1>
+                <table>
+                    <tr>
+                        <td><p id="resume_email">your.email@address.com</p></td>
+                        <td class="rt"><p id="resume_phone">123.456.7890</p></td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <p>Add an executive summary to highlight your skills, background, and character. Not too long, but enough for your future employer to get to know you.</p>
+            </div>
         </div>
+        
         <a class="word-export" href="javascript:void(0)">Export to Word (.doc)</a>
-        </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div style="background-color:ghostwhite; text-align: center">
-				<br>
-                <h3>Resume Builder</h3>
-				<p class="footer-links">
-					<a href="home.html">Home</a>
-                    .
-					<a href="faq.html">Faq</a>
-                    .
-                    <a href="contact.html">Contact</a>
-                    .
-					<a href="about.html">About</a>
-				</p>
-				<p class="footer-company-name">Resume Builder &copy; 2018</p>
-				<div class="footer-icons">					
-					<a target="_blank" href="https://github.com/loftkey/itc-apdev"><i class="fa fa-github"></i></a>
-				</div>
-                <br><br><br><br>
-			</div>
+        
+    </div>
+    <!-- End of Resume Template design -->
+        
+        
         <!-- Scripts -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>

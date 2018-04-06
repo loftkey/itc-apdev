@@ -28,14 +28,21 @@ function createModal() {
 var firstName = "First Name";
 var lastName = "First Name";
 var eMail = "email@domain.com";
-
+var summary = "Add an executive summary to highlight your skills, background, and character. Not too long, but enough for your future employer to get to know you.";
+var phoneNum = "123.456.7890";
 function myFunction1()
 {
     firstName = document.getElementById("first_name").value;
     lastName = document.getElementById("last_name").value; 
-    eMail = document.getElementById("e_mail").value; 
+    eMail = document.getElementById("e_mail").value;
+    phoneNum = document.getElementById("phone_num").value;
+}
+function myFunction1_2()
+{
+    summary = document.getElementById("sum_mary").value;
 }
 function myFunction2() {
+    summary = document.getElementById("sum_mary").value;
      var x = document.getElementById("myDIV");
      if (x.style.display === "none") {
          x.style.display = "block";
@@ -50,6 +57,8 @@ function myFunction2() {
      }
      document.getElementById("output1").innerHTML = firstName+" "+lastName;
      document.getElementById("output2").innerHTML = eMail;
+     document.getElementById("output3").innerHTML = summary;
+     document.getElementById("output4").innerHTML = phoneNum;
 }
 $('.word-export').click(function(events){
                 $('.word-content').wordExport();

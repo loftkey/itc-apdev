@@ -5,7 +5,7 @@
         <link rel="icon" href="./images/vicon.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!--		<link rel="stylesheet" href="assets/css/main.css" />-->
+		<link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	</head>
@@ -46,13 +46,67 @@
                         </div>
                 </div>
                 <div style="margin-left: 5%; margin-top: 5%">
-                    <div class="word-content">
-                        <font id="output1"></font><br>
-                        <font id="output2"></font>
-                    </div>
                     <div id="myDoc" style="display:none">
-                       <a class="word-export" href="javascript:void(0)">Export to Word (.doc)</a>
+<!--
+                        <div class="word-content">
+                            <font id="output1"></font><br>
+                            <font id="output2"></font>
+                        </div>                    
+-->
+                    
+                     <!-- Start of Resume Template design -->
+                    <div class="paper">
+
+                        <a id="edit_resume_header" type="button" data-toggle="modal" href="#resume_header_dialog">Click to edit header info</a>
+
+                        <div class="word-content">
+                            <style>
+                                .font-wrapper {
+                                    font-family: Arial;
+                                }
+                                h1 {
+                                    text-align: center;
+                                }
+                                p {
+                                    font-size: 12pt;
+                                }
+                                table {
+                                    font-family: Arial;
+                                }
+                                tr {
+                                    width: 6.4in;
+                                }
+                                td {
+                                    width: 3.25in;
+                                }
+                                td.rt {
+                                    text-align: right;
+                                }
+                            </style>
+                            <div class="font-wrapper">
+                            <div id="resume_header">
+                                <!-- name-->
+                                <h1 id="output1"></h1>
+                                <table>
+                                    <tr>
+                                        <!-- email-->
+                                        <td><p id="output2"></p></td>
+                                        <!-- phone number -->
+                                        <td class="rt"><p id="output4"></p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <hr>
+                            <!-- summary -->
+                            <p id="output3"></p>
+                            </div>
+                            </div>
+
+                            <a class="word-export" href="javascript:void(0)">Export to Word (.doc)</a>
+                        </div>
+
                     </div>
+                    <!-- End of Resume Template design -->
                 </div>
 			</section>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -107,6 +161,9 @@
                     <div class="form-group">
                         <input type="email" class="form-control" id="e_mail" placeholder="name@example.com">
                       </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="phone_num" placeholder="(012) 345-6789">
+                      </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -132,7 +189,7 @@
                       <br><br>
                       <form>
                       <div class="form-group">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="sum_mary" rows="3"></textarea>
                       </div>
                     </form>
                       
