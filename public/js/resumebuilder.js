@@ -71,16 +71,24 @@ createModal("Edit Resume Header", dialogContent, "resume_header_edit", "resume_h
 $('#submitEdit').on('click', function () {
     let content = $(this).parent().parent().find('.modal-body');
     let inputs = content.find('.form-control');
-    let worddoc = $('#paper');
+    inputs = $('#editorDialog .modal-dialog .modal-content .modal-body .form-control');
+    let worddoc = $('.word-content').find('#resume_header');
+    console.log(worddoc);
     
-    console.log(inputs);
-    for (let i = 0; i < inputs.length; i++) {
-        let targetID = inputs[i].data('fill');
+    inputs.each(function () {
+        let inputSource = $(this);
+        let targetID = inputSource.data('fill');
+        let sourceVal = inputSource.val();;
+        worddoc.find('#' + targetID).text(sourceVal);
+    });
+    //console.log(inputs);
+    //console.log($('#editorDialog .modal-dialog .modal-content .modal-body .form-control'));
+    /*for (let i = 0; i < inputs.length; i++) {
+        console.log(inputs[i]);
+        let targetID = inputs[i].attr('data-fill');
         worddoc.find('#' + targetID).html(inputs[i].value);
         console.log(inputs[i].value);
-    }
-    //console.log(content.find('form').children('input'));
-    //$('#paper').append($(this));
+    }*/
     $('#editorDialog').modal('hide');
 });
 
