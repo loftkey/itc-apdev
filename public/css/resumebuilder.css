@@ -16,3 +16,9 @@
     margin: 5em auto;
     padding: 1in;
 }
+
+#word_export {
+    position: fixed;
+    right: .5in;
+    bottom: .5in;
+}

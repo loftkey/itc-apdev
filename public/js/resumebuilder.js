@@ -14,73 +14,15 @@ $.urlParam = function(name){
     }
 }
 
-$('.word-export').click(function(events){
+$('#word_export').click(function(events){
                 $('.word-content').wordExport();
 });
-
-// Helper function for the createModal function to dynamically create event listeners
-/*function createDialogClickListener (id, callback) {
-    let element = document.querySelector(`[id="${ id }"]`);
-    
-    return element.addEventListener('click', callback);
-}*/
 
 $('#resume_header_dialog').on('hidden.bs.modal', function (event) {
     var button = $(event.relatedTarget); // DOM element that triggered the event
     
     console.log("Closed the modal! It's working!");
 });
-
-/*function createModal (title, content, buttonID="defaultAction", modalID=null, callback) {
-    let dialoghtml = `<div class="modal fade"`;
-    if(modalID !== null) {
-       dialoghtml += ` id="${ modalID }"`;
-    }
-    dialoghtml += ` tabindex="-1" role="dialog" aria-hidden="true">\
-                    <div class="modal-dialog" role="document">\
-                      <div class="modal-content">\
-                        <div class="modal-header">\
-                          <h5 class="modal-title">${ title }</h5>\
-                          <button type="button" class="close" data-dismiss="modal"\
-                            <span aria-hidden="true">&times;</span>\
-                          </button>\
-                        </div>\
-                        <div class="modal-body>\n${ content }\
-                        </div\
-                        <div class="modal-footer">\
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>\
-                          <button type="button" id="${ buttonID }" class="btn btn-primary">Update</button>\
-                        </div>\
-                      </div>\
-                    </div>\
-                  </div>\n`;
-    
-    $('body').prepend(dialoghtml);
-    createDialogClickListener(buttonID, callback);
-}*/
-
-/* Create modal dialog boxes here */
-/*let dialogContent = "Please enter your name and contact info:\
-                    <br><br>\
-                    <form>\
-                      <div class=\"form-row\">\
-                        <div class=\"col\">\
-                          <input type=\"text\" class=\"form-control\" placeholder=\"First name\">\
-                        </div>\
-                        <div class=\"col\">\
-                          <input type=\"text\" class=\"form-control\" placeholder=\"Last name\">\
-                        </div>\
-                      </div>\
-                    </form><br>\
-                    <div class=\"form-group\">\
-                      <input type=\"email\" class=\"form-control\" id=\"formControlInput1\" placeholder=\"name@example.com\">\
-                    </div>";
-
-createModal("Edit Resume Header", dialogContent, "resume_header_edit", "resume_header_dialog", function () {
-    //$('#resume_header_dialog').modal();
-    console.log("hello");
-    //console.log($(this).parent().prev());
-});*/
 
 $('#submitEdit').on('click', function () {
     let content = $(this).parent().parent().find('.modal-body');
@@ -95,24 +37,9 @@ $('#submitEdit').on('click', function () {
         let sourceVal = inputSource.val();;
         worddoc.find('#' + targetID).text(sourceVal);
     });
-    //console.log(inputs);
-    //console.log($('#editorDialog .modal-dialog .modal-content .modal-body .form-control'));
-    /*for (let i = 0; i < inputs.length; i++) {
-        console.log(inputs[i]);
-        let targetID = inputs[i].attr('data-fill');
-        worddoc.find('#' + targetID).html(inputs[i].value);
-        console.log(inputs[i].value);
-    }*/
+
     $('#editorDialog').modal('hide');
 });
-
-/*$('#editorDialog').on('hide.bs.modal', function (event) {
-  //$('#paper').append('<p>It works!</p>');
-  //console.log("hello");
-  console.log($(this));
-});*/
-
-//$(document).on('hide.bs.modal', '#')
 
 // Code modified from <https://getbootstrap.com/docs/3.3/javascript>
 $('#editorDialog').on('show.bs.modal', function (event) {
@@ -130,7 +57,17 @@ $('#editorDialog').on('show.bs.modal', function (event) {
                         <label for="email" class="control-label">Email</label>
                         <input type="email" data-fill="resume_email" class="form-control" id="email">
                         <label for="phone" class="control-label">Phone</label>
-                        <input type="email" data-fill="resume_phone" class="form-control" id="phone">
+                        <input type="text" data-fill="resume_phone" class="form-control" id="phone">
+                    </div>`;
+    } else if (category == "skills") {
+        titletext = "Edit Your Skills";
+        bodytext = `<div class="form-group">
+                        <label for="skillset1" class="control-label">Full Name</label>
+                        <input type="text" data-fill="resume_name" class="form-control" id="skillset1">
+                        <label for="email" class="control-label">Email</label>
+                        <input type="email" data-fill="resume_email" class="form-control" id="email">
+                        <label for="phone" class="control-label">Phone</label>
+                        <input type="text" data-fill="resume_phone" class="form-control" id="phone">
                     </div>`;
     }
     let modal = $(this)
