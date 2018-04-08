@@ -23,7 +23,7 @@
 			
 		<!-- Main -->
 			<section id="main" class="wrapper">
-                <div id="myDIV">
+                <div id="introductionElement">
                     <div style="text-align: center" >
                             <h2 style=" margin-top: 60px;">Hello Job Seeker!</h2>
                         <p>Create the perfect Resume by selecting a template below</p>
@@ -34,79 +34,842 @@
                     <div class="container">
                           <div class="row">
                             <div class="col-sm">
-                              <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp1.png" width="100%"/></a>
+                              <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog" onclick="template1()"><img src="images/temp1.png" width="100%"/></a>
                             </div>
                             <div class="col-sm">
-                              <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp2.png" width="100%"/></a>
+                              <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog" onclick="template2()"><img src="images/temp2.png" width="100%"/></a>
                             </div>
                             <div class="col-sm">
-                              <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp3.png" width="100%"/></a>
+                              <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog" onclick="template3()"><img src="images/temp3.png" width="100%"/></a>
+                            </div>
+                            <div class="col-sm">
+                              <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog" onclick="template4()"><img src="images/temp4.png" width="100%"/></a>
                             </div>
                           </div>
                         </div>
                 </div>
                 <div style="margin-left: 5%; margin-top: 5%">
-                    <div id="myDoc" style="display:none">
-<!--
-                        <div class="word-content">
-                            <font id="output1"></font><br>
-                            <font id="output2"></font>
-                        </div>                    
--->
-                    
-                     <!-- Start of Resume Template design -->
-                    <div class="paper">
+                    <div id="template1Element" style="display:none">                    
+                        <!-- Start of Resume Template design -->
+                            <div class="paper">
+                                <div class="word-content">
+                                    <style>
+                                        .font-wrapper {
+                                            font-family: Arial;
+                                        }
+                                        h1 {
+                                            text-align: center;
+                                        }
+                                        p {
+                                            font-size: 12pt;
+                                        }
+                                        table {
+                                            width: 6.4in;
+                                            font-family: Arial;
+                                        }
+                                        table.h {
+                                            text-align: center;
+                                            border: 1px solid black;
+                                        }
+                                        tr {
+                                            width: 6.4in;
+                                        }
+                                        td {
+                                            width: 3.25in;
+                                        }
+                                        td.h {
+                                            width:100%;
+                                            text-align: center;
+                                            border: 1px solid black;
+                                        }
+                                        th.lf {
+                                            text-align:left;
+                                        }
+                                        th.rt {
+                                            text-align:right;
+                                        }
+                                        th.c {
+                                            text-align: center;
+                                            width: 2.133in;
+                                        }
+                                        td.rt {
+                                            text-align: right;
+                                        }
+                                        td.c {
+                                            text-align: center;
+                                        }
+                                    </style>
+                                    <div class="font-wrapper">
+                                    <h1>James Madison</h1>
 
-                        <a id="edit_resume_header" type="button" data-toggle="modal" href="#resume_header_dialog">Click to edit header info</a>
+                                    <table>
+                                        <tr>
+                                            <td><p>james.madison@whitehouse.gov</p></td>
+                                            <td class="rt"><p>222.245.7890</p></td>
+                                        </tr>
+                                    </table>
 
-                        <div class="word-content">
-                            <style>
-                                .font-wrapper {
-                                    font-family: Arial;
-                                }
-                                h1 {
-                                    text-align: center;
-                                }
-                                p {
-                                    font-size: 12pt;
-                                }
-                                table {
-                                    font-family: Arial;
-                                }
-                                tr {
-                                    width: 6.4in;
-                                }
-                                td {
-                                    width: 3.25in;
-                                }
-                                td.rt {
-                                    text-align: right;
-                                }
-                            </style>
-                            <div class="font-wrapper">
-                            <div id="resume_header">
-                                <!-- name-->
-                                <h1 id="output1"></h1>
-                                <table>
-                                    <tr>
-                                        <!-- email-->
-                                        <td><p id="output2"></p></td>
-                                        <!-- phone number -->
-                                        <td class="rt"><p id="output4"></p></td>
-                                    </tr>
-                                </table>
+                                    <hr>
+
+                                    <table class="h">
+                                        <tr>
+                                            <td><p>Skills</p></td>
+                                        </tr>
+                                    </table>
+
+                                    <table>
+                                        <tr>
+                                            <th class="c">Skillset 1</th>
+                                            <th class="c">Skillset 2</th>
+                                            <th class="c">Skillset 3</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul>
+                                                    <li>skill 1</li>
+                                                    <li>skill 2</li>
+                                                    <li>skill 3</li>
+                                                </ul>
+                                            </td>
+                                                                <td>
+                                                <ul>
+                                                    <li>skill 1</li>
+                                                    <li>skill 2</li>
+                                                    <li>skill 3</li>
+                                                </ul>
+                                            </td>
+                                                                <td>
+                                                <ul>
+                                                    <li>skill 1</li>
+                                                    <li>skill 2</li>
+                                                    <li>skill 3</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <table class="h">
+                                        <tr>
+                                            <td><p>Work Experience</p></td>
+                                        </tr>
+                                    </table>
+
+                                    <table>
+                                        <tr>
+                                            <th class="lf">Place</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Info</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul>
+                                                    <li>Duties</li>
+                                                    <li>Responsibilities</li>
+                                                </ul>
+                                            </td>
+                                        </tr>               
+                                        <tr>
+                                            <th class="lf">Place</th>
+                                            <th class="rt">Date</th>
+                                        </tr>               
+                                        <tr>
+                                            <td>Info</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul>
+                                                    <li>Duties</li>
+                                                    <li>Responsibilities</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <table class="h">
+                                        <tr>
+                                            <td><p>Education</p></td>
+                                        </tr>
+                                    </table>
+
+                                    <table>
+                                        <tr>
+                                            <th class="lf">Place</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Title</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="lf">Place</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Title</td>
+                                        </tr>
+                                    </table>
+
+                                    <table class="h">
+                                        <tr>
+                                            <td><p>Certifications</p></td>
+                                        </tr>
+                                    </table>
+
+                                    <table>
+                                        <tr>
+                                            <th class="lf">Certification</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="lf">Certification</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                </div>  
                             </div>
-                            <hr>
-                            <!-- summary -->
-                            <p id="output3"></p>
-                            </div>
-                            </div>
-
-                            <a class="word-export" href="javascript:void(0)">Export to Word (.doc)</a>
-                        </div>
-
+                            <a id="fixedbutton" class="word-export" href="javascript:void(0)"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download to Word (.doc)</button></a>
+                            <!-- End of Resume Template design -->
                     </div>
                     <!-- End of Resume Template design -->
+                    <div id="template2Element" style="display:none">
+                            <!-- Start of Resume Template design -->
+                        <div class="paper">
+
+                            <div class="word-content">
+                                <style>
+                                    .font-wrapper {
+                                        font-family: Arial;
+                                    }
+                                    h1 {
+                                        text-align: center;
+                                    }
+                                    p {
+                                        font-size: 12pt;
+                                    }
+                                    table {
+                                        width: 6.4in;
+                                        font-family: Arial;
+                                    }
+                                    table.sm {
+                                        width:5in;
+                                        font-family:Arial
+                                    }
+                                    table.h {
+                                        width:5in;
+                                        text-align: center;
+                                        border: 1px solid black;
+                                    }
+                                    tr {
+                                        width: 5.in;
+                                    }
+                                    td {
+                                        width: 2in;
+                                    }
+                                    td.h {
+                                        text-align: center;
+                                        border: 1px solid black;
+                                    }
+                                    th.lf {
+                                        text-align:left;
+                                    }
+                                    th.rt {
+                                        text-align:right;
+                                    }
+                                    th.c {
+                                        text-align: center;
+                                    }
+                                    td.rt {
+                                        text-align: right;
+                                    }
+                                    td.c {
+                                        text-align: center;
+                                    }
+                                    div.sk {
+                                        border: 1px solid black;
+                                        text-align: center;
+                                        width: 1.4in;
+                                        height: 6in;
+                                    }
+                                </style>
+                                <div class="font-wrapper">
+                                <h1>James Madison</h1>
+
+                                <table>
+                                    <tr>
+                                        <td><p>james.madison@whitehouse.gov</p></td>
+                                        <td class="rt"><p>222.245.7890</p></td>
+                                    </tr>
+                                </table>
+
+                                <hr>
+
+                                <table>
+                                    <tr>
+                                    <td>
+                                <div class="sk">
+                                    <p>Skills</p>
+                                    <p>HTML</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>CSS</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>JAVASCRIPT</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>JQUERY</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>BOOTSTRAP</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>NODE</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>GITKRAKEN</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>BRACKETS</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                </div>
+                                    </td><td>
+
+                                <table class="h">
+                                    <tr>
+                                        <td><p>Work Experience</p></td>
+                                    </tr>
+                                </table>
+
+                                <table class="sm">
+                                    <tr>
+                                        <th class="lf">Place</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Info</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Duties</li>
+                                                <li>Responsibilities</li>
+                                            </ul>
+                                        </td>
+                                    </tr>               
+                                    <tr>
+                                        <th class="lf">Place</th>
+                                        <th class="rt">Date</th>
+                                    </tr>               
+                                    <tr>
+                                        <td>Info</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Duties</li>
+                                                <li>Responsibilities</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="h">
+                                    <tr>
+                                        <td><p>Education</p></td>
+                                    </tr>
+                                </table>
+
+                                <table class="sm">
+                                    <tr>
+                                        <th class="lf">Place</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Title</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="lf">Place</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Title</td>
+                                    </tr>
+                                </table>
+
+                                <table class="h">
+                                    <tr>
+                                        <td><p>Certifications</p></td>
+                                    </tr>
+                                </table>
+
+                                <table class="sm">
+                                    <tr>
+                                        <th class="lf">Certification</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="lf">Certification</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                </table>
+                                    </td>
+                                    </tr>
+                                    </table>
+                                </div>
+
+
+                                <table class="h">
+                                    <tr>
+                                        <td><p>Projects</p></td>
+                                    </tr>
+                                </table>
+
+                                <table class="sm">
+                                    <tr>
+                                        <th class="lf">Place</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Info</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Duties</li>
+                                                <li>Responsibilities</li>
+                                            </ul>
+                                        </td>
+                                    </tr>               
+                            </table>
+                            </div>
+                            </div>
+                        <a id="fixedbutton" class="word-export" href="javascript:void(0)"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download to Word (.doc)</button></a>
+                        <!-- End of Resume Template design -->
+                    </div>
+                    <div id="template3Element" style="display:none">
+                        <!-- Start of Resume Template design -->
+                        <div class="paper">
+
+                            <div class="word-content">
+                                <style>
+                                    .font-wrapper {
+                                        font-family: Arial;
+                                    }
+                                    h1 {
+                                        text-align: center;
+                                    }
+                                    p {
+                                        font-size: 12pt;
+                                    }
+                                    table {
+                                        width: 6.4in;
+                                        font-family: Arial;
+                                    }
+                                    table.sm {
+                                        width:5in;
+                                        font-family:Arial
+                                    }
+                                    table.h {
+                                        width:5in;
+                                        text-align: center;
+                                        border: 1px solid black;
+                                    }
+                                    tr {
+                                        width: 5.in;
+                                    }
+                                    td {
+                                        width: 2in;
+                                    }
+                                    td.h {
+                                        text-align: center;
+                                        border: 1px solid black;
+                                    }
+                                    th.lf {
+                                        text-align:left;
+                                    }
+                                    th.rt {
+                                        text-align:right;
+                                    }
+                                    th.c {
+                                        text-align: center;
+                                    }
+                                    td.rt {
+                                        text-align: right;
+                                    }
+                                    td.c {
+                                        text-align: center;
+                                    }
+                                    div.sk {
+                                        border: 1px solid black;
+                                        text-align: center;
+                                        width: 1.7in;
+                                        height: 7.2in;
+                                    }
+                                </style>
+                                <div class="font-wrapper">
+                                <h1>James Madison</h1>
+
+                                <table>
+                                    <tr>
+                                        <td><p>james.madison@whitehouse.gov</p></td>
+                                        <td class="rt"><p>222.245.7890</p></td>
+                                    </tr>
+                                </table>
+
+                                <hr>
+
+                                <table>
+                                    <tr>
+                                    <td>
+
+                                <table class="h">
+                                    <tr>
+                                        <td><p>Work Experience</p></td>
+                                    </tr>
+                                </table>
+
+                                <table class="sm">
+                                    <tr>
+                                        <th class="lf">Place</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Info</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Duties</li>
+                                                <li>Responsibilities</li>
+                                            </ul>
+                                        </td>
+                                    </tr>               
+                                    <tr>
+                                        <th class="lf">Place</th>
+                                        <th class="rt">Date</th>
+                                    </tr>               
+                                    <tr>
+                                        <td>Info</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Duties</li>
+                                                <li>Responsibilities</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="h">
+                                    <tr>
+                                        <td><p>Education</p></td>
+                                    </tr>
+                                </table>
+
+                                <table class="sm">
+                                    <tr>
+                                        <th class="lf">Place</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Title</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="lf">Place</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Title</td>
+                                    </tr>
+                                </table>
+
+                                <table class="h">
+                                    <tr>
+                                        <td><p>Certifications</p></td>
+                                    </tr>
+                                </table>
+
+                                <table class="sm">
+                                    <tr>
+                                        <th class="lf">Certification</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="lf">Certification</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                </table>
+
+                                <table class="h">
+                                    <tr>
+                                        <td><p>Projects</p></td>
+                                    </tr>
+                                </table>
+
+                                <table class="sm">
+                                    <tr>
+                                        <th class="lf">Place</th>
+                                        <th class="rt">Date</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Info</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Duties</li>
+                                                <li>Responsibilities</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                        </table>
+                                    </td>
+                                        <td>
+                                <div class="sk">
+                                    <img src="images/barGraphPlaceholder.png" height="120px" width="150px" alt="bar graph">
+                                    <br>
+                                    <img src="images/piChartPlaceholder.png" height="120px" width="150px" alt="pi chart">
+                                    <br>
+                                    <p>HTML</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>CSS</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>JAVASCRIPT</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>JQUERY</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                    <p>BOOTSTRAP</p>
+                                    <img src="images/skillbar.jpg" alt="Skillbar">
+                                    <br>
+                                </div>
+                                    </td>
+                                    </tr>               
+                            </table>
+                            </div></div>                            
+                        </div>
+                        <a id="fixedbutton" class="word-export" href="javascript:void(0)"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download to Word (.doc)</button></a>
+                        <!-- End of Resume Template design -->
+                    </div>
+                    <div id="template4Element" style="display:none">
+                            <!-- Start of Resume Template design -->
+                            <div class="paper">
+
+                                <div class="word-content">
+                                    <style>
+                                        .font-wrapper {
+                                            font-family: Arial;
+                                        }
+                                        h1 {
+                                            text-align: center;
+                                        }
+                                        p {
+                                            font-size: 12pt;
+                                        }
+                                        table {
+                                            width: 6.4in;
+                                            font-family: Arial;
+                                        }
+                                        table.sm {
+                                            width:5in;
+                                            font-family:Arial
+                                        }
+                                        table.h {
+                                            width:5in;
+                                            text-align: center;
+                                            border: 1px solid black;
+                                        }
+                                        table.vsm {
+                                            width:.5in;
+                                            text-align: center;
+                                        }
+                                        tr {
+                                            width: 5.in;
+                                        }
+                                        td {
+                                            width: 2in;
+                                        }
+                                        td.h {
+                                            text-align: center;
+                                            border: 1px solid black;
+                                        }
+                                        th.lf {
+                                            text-align:left;
+                                        }
+                                        th.rt {
+                                            text-align:right;
+                                        }
+                                        th.c {
+                                            text-align: center;
+                                        }
+                                        td.rt {
+                                            text-align: right;
+                                        }
+                                        td.c {
+                                            text-align: center;
+                                        }
+                                        div.sk {
+                                            border: 1px solid black;
+                                            text-align: center;
+                                            width: 1.7in;
+                                            height: 7.2in;
+                                        }
+                                    </style>
+                                    <div class="font-wrapper">
+                                    <h1>James Madison</h1>
+
+                                    <table>
+                                        <tr>
+                                            <td><p>james.madison@whitehouse.gov</p></td>
+                                            <td class="rt"><p>222.245.7890</p></td>
+                                        </tr>
+                                    </table>
+
+                                    <hr>
+
+                                    <table>
+                                        <tr>
+                                        <td>
+
+                                    <table class="h">
+                                        <tr>
+                                            <td><p>Work Experience</p></td>
+                                        </tr>
+                                    </table>
+
+                                    <table class="sm">
+                                        <tr>
+                                            <th class="lf">Place</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Info</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul>
+                                                    <li>Duties</li>
+                                                    <li>Responsibilities</li>
+                                                </ul>
+                                            </td>
+                                        </tr>               
+                                        <tr>
+                                            <th class="lf">Place</th>
+                                            <th class="rt">Date</th>
+                                        </tr>               
+                                        <tr>
+                                            <td>Info</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul>
+                                                    <li>Duties</li>
+                                                    <li>Responsibilities</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <table class="h">
+                                        <tr>
+                                            <td><p>Education</p></td>
+                                        </tr>
+                                    </table>
+
+                                    <table class="sm">
+                                        <tr>
+                                            <th class="lf">Place</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Title</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="lf">Place</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Title</td>
+                                        </tr>
+                                    </table>
+
+                                    <table class="h">
+                                        <tr>
+                                            <td><p>Certifications</p></td>
+                                        </tr>
+                                    </table>
+
+                                    <table class="sm">
+                                        <tr>
+                                            <th class="lf">Certification</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="lf">Certification</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                    </table>
+
+                                    <table class="h">
+                                        <tr>
+                                            <td><p>Projects</p></td>
+                                        </tr>
+                                    </table>
+
+                                    <table class="sm">
+                                        <tr>
+                                            <th class="lf">Place</th>
+                                            <th class="rt">Date</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Info</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul>
+                                                    <li>Duties</li>
+                                                    <li>Responsibilities</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                            </table>
+                                        </td>
+                                            <td>
+                                    <div class="sk">
+                                        <p>Skills</p>
+                                        <p>HTML</p>
+                                        <img src="images/circle.jpg" alt="circle">
+                                        <p>CSS</p>
+                                        <img src="images/circle.jpg" alt="circle">
+                                        <p>JAVASCRIPT</p>
+                                        <img src="images/circle.jpg" alt="circle">
+                                        <p>JQUERY</p>
+                                        <img src="images/circle.jpg" alt="circle">
+                                        <p>BOOTSTRAP</p>
+                                        <img src="images/circle.jpg" alt="circle">
+                                        <p>NODE</p>
+                                        <img src="images/circle.jpg" alt="circle">
+                                        <p>BRACKETS</p>
+                                        <img src="images/circle.jpg" alt="circle">
+                                        <p>coding</p>
+                                        <img src="images/radioButtons.jpg" alt="skills">
+                                        <p>policy</p>
+                                        <img src="images/radioButtons.jpg" alt="skills">
+                                    </div>
+                                        </td>
+                                        </tr>               
+                                </table>
+                                </div></div>                                
+                            </div>
+                            <a id="fixedbutton" class="word-export" href="javascript:void(0)"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download to Word (.doc)</button></a>
+                            <!-- End of Resume Template design -->
+                    </div>
                 </div>
 			</section>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
