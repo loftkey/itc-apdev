@@ -47,18 +47,18 @@ function template4()
 {
     templateNumber = 4;
 }
-function myFunction1()
+function modalinput1()
 {
     firstName = document.getElementById("first_name").value;
     lastName = document.getElementById("last_name").value; 
     eMail = document.getElementById("e_mail").value;
     phoneNum = document.getElementById("phone_num").value;
 }
-function myFunction1_2()
+function modalinput3()
 {
     summary = document.getElementById("sum_mary").value;
 }
-function myFunction2() {
+function modalinput2() {
     summary = document.getElementById("sum_mary").value;
     
      if(templateNumber === 1){
@@ -84,11 +84,36 @@ function myFunction2() {
      } else {
          t1.style.display = "none";
      }
-     document.getElementById("outputNAME").innerHTML = firstName+" "+lastName;
-     document.getElementById("outputEMAIL").innerHTML = eMail;
-     document.getElementById("outputSUMMARY").innerHTML = summary;
-     document.getElementById("outputPHONE").innerHTML = phoneNum;
+     outputAll();
 }
+function outputAll()
+{
+    // template 1
+    document.getElementById("outputNAME1").innerHTML = firstName+" "+lastName;
+    document.getElementById("outputEMAIL1").innerHTML = eMail;
+//    document.getElementById("outputSUMMARY").innerHTML = summary;
+    document.getElementById("outputPHONE1").innerHTML = phoneNum;
+    
+    
+    // template 2
+    document.getElementById("outputNAME2").innerHTML = firstName+" "+lastName;
+    document.getElementById("outputEMAIL2").innerHTML = eMail;
+//    document.getElementById("outputSUMMARY").innerHTML = summary;
+    document.getElementById("outputPHONE2").innerHTML = phoneNum;
+    
+    // template 3
+    document.getElementById("outputNAME3").innerHTML = firstName+" "+lastName;
+    document.getElementById("outputEMAIL3").innerHTML = eMail;
+//    document.getElementById("outputSUMMARY").innerHTML = summary;
+    document.getElementById("outputPHONE3").innerHTML = phoneNum;
+    
+    // template 4
+    document.getElementById("outputNAME4").innerHTML = firstName+" "+lastName;
+    document.getElementById("outputEMAIL4").innerHTML = eMail;
+//    document.getElementById("outputSUMMARY").innerHTML = summary;
+    document.getElementById("outputPHONE4").innerHTML = phoneNum;
+}
+
 $('.word-export1').click(function(events){
                 $('.word-content1').wordExport();
 });
