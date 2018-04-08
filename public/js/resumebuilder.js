@@ -5,42 +5,48 @@ $('.word-export').click(function(events){
 });
 
 // Helper function for the createModal function to dynamically create event listeners
-function createDialogClickListener (id, callback) {
+/*function createDialogClickListener (id, callback) {
     let element = document.querySelector(`[id="${ id }"]`);
     
     return element.addEventListener('click', callback);
-}
+}*/
 
-function createModal (title, content, buttonID="defaultAction", modalID=null, callback) {
-    let dialoghtml = "<div class=\"modal fade\"";
+$('#resume_header_dialog').on('hidden.bs.modal', function (event) {
+    var button = $(event.relatedTarget); // DOM element that triggered the event
+    
+    console.log("Closed the modal! It's working!");
+});
+
+/*function createModal (title, content, buttonID="defaultAction", modalID=null, callback) {
+    let dialoghtml = `<div class="modal fade"`;
     if(modalID !== null) {
-       dialoghtml += " id=\"" + modalID + "\"";
+       dialoghtml += ` id="${ modalID }"`;
     }
-    dialoghtml += " tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\
-                    <div class=\"modal-dialog\" role=\"document\">\
-                      <div class=\"modal-content\">\
-                        <div class=\"modal-header\">\
-                          <h5 class=\"modal-title\">" + title + "</h5>\
-                          <button type=\"button\" class=\"close\" data-dismiss=\"modal\"\
-                            <span aria-hidden=\"true\">&times;</span>\
+    dialoghtml += ` tabindex="-1" role="dialog" aria-hidden="true">\
+                    <div class="modal-dialog" role="document">\
+                      <div class="modal-content">\
+                        <div class="modal-header">\
+                          <h5 class="modal-title">${ title }</h5>\
+                          <button type="button" class="close" data-dismiss="modal"\
+                            <span aria-hidden="true">&times;</span>\
                           </button>\
                         </div>\
-                        <div class=\"modal-body>\n" + content + "\
+                        <div class="modal-body>\n${ content }\
                         </div\
-                        <div class=\"modal-footer\">\
-                          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Cancel</button>\
-                          <button type=\"button\" id=\"" + buttonID + "\" class=\"btn btn-primary\">Continue</button>\
+                        <div class="modal-footer">\
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>\
+                          <button type="button" id="${ buttonID }" class="btn btn-primary">Update</button>\
                         </div>\
                       </div>\
                     </div>\
-                  </div>\n";
+                  </div>\n`;
     
-    $('body').append(dialoghtml);
+    $('body').prepend(dialoghtml);
     createDialogClickListener(buttonID, callback);
-}
+}*/
 
 /* Create modal dialog boxes here */
-let dialogContent = "Please enter your name and contact info:\
+/*let dialogContent = "Please enter your name and contact info:\
                     <br><br>\
                     <form>\
                       <div class=\"form-row\">\
@@ -60,4 +66,52 @@ createModal("Edit Resume Header", dialogContent, "resume_header_edit", "resume_h
     //$('#resume_header_dialog').modal();
     console.log("hello");
     //console.log($(this).parent().prev());
+});*/
+
+$('#submitEdit').on('click', function () {
+    let content = $(this).parent().parent().find('.modal-body');
+    let inputs = content.find('.form-control');
+    let worddoc = $('#paper');
+    
+    console.log(inputs);
+    for (let i = 0; i < inputs.length; i++) {
+        let targetID = inputs[i].data('fill');
+        worddoc.find('#' + targetID).html(inputs[i].value);
+        console.log(inputs[i].value);
+    }
+    //console.log(content.find('form').children('input'));
+    //$('#paper').append($(this));
+    $('#editorDialog').modal('hide');
+});
+
+/*$('#editorDialog').on('hide.bs.modal', function (event) {
+  //$('#paper').append('<p>It works!</p>');
+  //console.log("hello");
+  console.log($(this));
+});*/
+
+//$(document).on('hide.bs.modal', '#')
+
+// Code modified from <https://getbootstrap.com/docs/3.3/javascript>
+$('#editorDialog').on('show.bs.modal', function (event) {
+    let button = $(event.relatedTarget) // Button that triggered the modal
+    let category = button.data('tag') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    let bodytext = "Nothing happened :(";
+    let titletext = "Default Title";
+    if(category == "header") {
+        titletext = "Edit Resume Header";
+        bodytext = `<div class="form-group">
+                        <label for="full-name" class="control-label">Full Name</label>
+                        <input type="text" data-fill="resume_name" class="form-control" id="full-name">
+                        <label for="email" class="control-label">Email</label>
+                        <input type="email" data-fill="resume_email" class="form-control" id="email">
+                        <label for="phone" class="control-label">Phone</label>
+                        <input type="email" data-fill="resume_phone" class="form-control" id="phone">
+                    </div>`;
+    }
+    let modal = $(this)
+    modal.find('.modal-title').text(titletext)
+    modal.find('.modal-body').html(bodytext);
 });
