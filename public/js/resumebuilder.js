@@ -1,4 +1,18 @@
-$("body").append("<aside class=\"sidebar\">This is an aside.</aside>");
+$(document).ready(function() {
+    //console.log($(location).attr('pathname'));
+    $('div.paper').load('resume-templates/template' + $.urlParam('template') + '.html');
+});
+
+// Function taken from <https://www.sitepoint.com/url-parameters-jquery>
+$.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
+    if (results==null){
+       return null;
+    }
+    else{
+       return results[1] || 0;
+    }
+}
 
 $('.word-export').click(function(events){
                 $('.word-content').wordExport();

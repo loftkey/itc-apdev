@@ -19,11 +19,20 @@ var mime = {
     js: 'application/javascript'
 };
 
-/*app.get('/', function (req, res) {
-    let type = 'text/html';
-    let stream = fs.createReadStream('home.html');
-    res.send();
-});*/
+/* This is our own code for a very rudimentary and unsavory template engine */
+app.get('/resumebuilder', function (req, res) {
+    fs.readFile(dir + '/resumebuilder.html', function (err, data) {
+        if (err) {
+            res.set('Content-Type', 'text/plain');
+            res.status(404).end('Page not found');
+        } else {
+            res.set('Content-Type', 'text/html');
+            res.write(data);
+            res.end();
+        }
+    });
+});
+/* End of our code, back to copied code */
 
 app.get('*', function (req, res) {
     var file = path.join(dir, req.path.replace(/\/$/, 'home.html'));
