@@ -89,6 +89,15 @@ function myFunction2() {
      document.getElementById("outputSUMMARY").innerHTML = summary;
      document.getElementById("outputPHONE").innerHTML = phoneNum;
 }
-$('.word-export').click(function(events){
-                $('.word-content').wordExport();
+$('.word-export1').click(function(events){
+                $('.word-content1').wordExport();
+});
+$('.word-export2').click(function(events){
+                $('.word-content2').wordExport();
+});
+$('.word-export3').click(function(events){
+                $('.word-content3').wordExport();
+});
+$('.word-export4').click(function(events){
+                $('.word-content4').wordExport();
 });
