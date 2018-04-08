@@ -26,7 +26,7 @@ function createModal() {
       </div>*/
 }
 var firstName = "First Name";
-var lastName = "First Name";
+var lastName = "Last Name";
 var eMail = "email@domain.com";
 var summary = "Add an executive summary to highlight your skills, background, and character. Not too long, but enough for your future employer to get to know you.";
 var phoneNum = "123.456.7890";
@@ -61,7 +61,16 @@ function modalinput3()
 function modalinput2() {
     summary = document.getElementById("sum_mary").value;
     
-     if(templateNumber === 1){
+     updateExecute();
+}
+function updateExecute()
+{
+    changeView();
+    outputAll();
+}
+function changeView()
+{
+    if(templateNumber === 1){
          var t1 = document.getElementById("template1Element");
      } else if (templateNumber === 2){
          var t1 = document.getElementById("template2Element");       
@@ -84,7 +93,6 @@ function modalinput2() {
      } else {
          t1.style.display = "none";
      }
-     outputAll();
 }
 function outputAll()
 {
