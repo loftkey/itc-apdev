@@ -56,11 +56,8 @@ $('#editorDialog').on('show.bs.modal', function (event) {
     let bodytext = "Nothing happened :(";
     let titletext = "Default Title";
     
-    // UPDATING GLOBAL VARIABLE
-    current_section = button.parent().attr("id");
-    //console.log(current_section);
-    
     if(category == "header") {
+        current_section = "resume_header";
         titletext = "Edit Resume Header";
         bodytext = `<div class="form-group">
                         <label for="full-name" class="control-label">Full Name</label>
@@ -71,6 +68,7 @@ $('#editorDialog').on('show.bs.modal', function (event) {
                         <input type="text" data-fill="resume_phone" class="form-control" id="phone">
                     </div>`;
     } else if (category == "skills") {
+        current_section = "resume_skills";
         titletext = "Edit Your Skills";
         bodytext = `<div class="form-group">
                       <div class="form-row">
@@ -108,6 +106,96 @@ $('#editorDialog').on('show.bs.modal', function (event) {
                           <input type="text" data-fill="resume_skill3-3" class="form-control" id="skillset3-3" placeholder="skill 3">
                         </div>
                       </div>
+                    </div>`;
+    } else if (category == "work") {
+        current_section = "resume_work";
+        titletext = "Edit Your Work Experience";
+        bodytext = `<div class="form-group">
+                      <div class="form-row">
+                        <div class="col">
+                          <input type="text" data-fill="resume_place1" class="form-control" placeholder="Work Place #1">
+                        </div>
+                        <div class="col">
+                          <input type="text" data-fill="resume_date1" class="form-control" placeholder="date">
+                        </div>
+                        <input type="text" data-fill="resume_duties1" class="form-control form-row" placeholder="Your tasks">
+                        <input type="text" data-fill="resume_resp1" class="form-control form-row" placeholder="Your responsibilities">
+                      </div>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="form-group">
+                      <div class="form-row">
+                        <div class="col">
+                          <input type="text" data-fill="resume_place2" class="form-control" placeholder="Work Place #2">
+                        </div>
+                        <div class="col">
+                          <input type="text" data-fill="resume_date2" class="form-control" placeholder="date">
+                        </div>
+                        <input type="text" data-fill="resume_duties2" class="form-control form-row" placeholder="Your tasks">
+                        <input type="text" data-fill="resume_resp2" class="form-control form-row" placeholder="Your responsibilities">
+                      </div>
+                    </div>`;
+    } else if (category == "education") {
+        current_section = "resume_education";
+        titletext = "Edit Your Education";
+        bodytext = `<div class="form-group">
+                      <div class="form-row">
+                        <div class="col">
+                          <input type="text" data-fill="resume_edplace1" class="form-control" placeholder="Educational Institution #1">
+                        </div>
+                        <div class="col">
+                          <input type="text" data-fill="resume_eddate1" class="form-control" placeholder="date">
+                        </div>
+                      </div>
+                      <input type="text" data-fill="resume_deg1" class="form-control" placeholder="Degrees and awards...">
+                    </div>
+                    
+                    <hr>
+
+                    <div class="form-group">
+                      <div class="form-row">
+                        <div class="col">
+                          <input type="text" data-fill="resume_edplace2" class="form-control" placeholder="Educational Institution #2">
+                        </div>
+                        <div class="col">
+                          <input type="text" data-fill="resume_eddate2" class="form-control" placeholder="date">
+                        </div>
+                      </div>
+                      <input type="text" data-fill="resume_deg2" class="form-control" placeholder="Degrees and awards...">
+                    </div>`;
+    } else if (category == "certs") {
+        current_section = "resume_certs";
+        titletext = "Edit Your Certifications";
+        bodytext = `<div class="form-group">
+                      <div class="form-row">
+                        <div class="col">
+                          <input type="text" data-fill="resume_cert1" class="form-control" placeholder="Certification #1">
+                        </div>
+                        <div class="col">
+                          <input type="text" data-fill="resume_certdate1" class="form-control" placeholder="Date earned">
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="form-group">
+                      <div class="form-row">
+                        <div class="col">
+                          <input type="text" data-fill="resume_cert2" class="form-control" placeholder="Certification #2">
+                        </div>
+                        <div class="col">
+                          <input type="text" data-fill="resume_certdate2" class="form-control" placeholder="Date earned">
+                        </div>
+                      </div>
+                    </div>`;
+    } else if (category == "projects") {
+        current_section = "resume_projects";
+        titletext = "Edit Your Projects";
+        bodytext = `<div class="form-group">
+                      
                     </div>`;
     }
     let modal = $(this)
