@@ -18,6 +18,8 @@ $.urlParam = function(name){
 }
 
 $('#word_export').click(function(events){
+    
+                $(".editor-link").addClass("d-none")
                 $('.word-content').wordExport();
 });
 
