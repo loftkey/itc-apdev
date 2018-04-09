@@ -6,9 +6,7 @@
 
 ## Resources
 [Creating a downloadable Word doc](https://www.npmjs.com/package/officegen)
-
 [Intro to NodeJS webapps](https://www.tutorialspoint.com/nodejs/)
-
 [Storing local data with the browser](http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/)
 
 ## How to Setup Your Environment
