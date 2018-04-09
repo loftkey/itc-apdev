@@ -23,8 +23,17 @@
     right: 1.2in;
 }
 
+.formButton{
+    width: 220px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
 #word_export {
-    position: fixed;
-    right: .5in;
-    bottom: .5in;
+/*
+    position: absolute;
+    top: 55%; 
+    left: 80%; 
+*/
+ width: 220px;
 }

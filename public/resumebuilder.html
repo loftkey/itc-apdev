@@ -55,15 +55,28 @@
                 </div>
             </nav>
         <!-- End Header -->
-        
-        
-        <!-- Start of Resume Template design -->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+                <ul class="list-group" style="margin-top: 50%">
+                <button type="button" class="btn btn-primary formButton" data-toggle="modal" data-target="#editorDialog" data-toggle="modal" data-tag="header" class="editor-link">edit header</button>
+                <button type="button" class="btn btn-primary formButton" data-toggle="modal" data-target="#editorDialog" data-toggle="modal" data-tag="skills" class="editor-link">edit skills</button>
+                <button type="button" class="btn btn-primary formButton" data-toggle="modal" data-target="#editorDialog" data-toggle="modal" data-tag="work" class="editor-link">edit experience</button>
+                <button type="button" class="btn btn-primary formButton" data-toggle="modal" data-target="#editorDialog" data-toggle="modal" data-tag="education" class="editor-link">edit education</button>
+                <button type="button" class="btn btn-primary formButton" data-toggle="modal" data-target="#editorDialog" data-toggle="modal" data-tag="certs" class="editor-link">edit certs</button> <br>
+                <button id="word_export" type="button" class="btn btn-secondary">Download to Word (.doc) <i class="fa fa-download" aria-hidden="true"></i></button>
+                </ul>
+            </div>
+            <div class="col-sm">
     <div class="paper">
         
         <a data-toggle="modal" data-tag="header" class="float-right" href="#editorDialog">edit header</a>
 
         <div class="word-content">
             <style>
+                .hide{
+                    display: none;
+                }
                 .font-wrapper {
                     font-family: Arial;
                 }
@@ -101,9 +114,17 @@
             </div>
         </div>
     </div>
+            </div>
+            <div class="col-sm">
+                 
+            </div>
+          </div>
+        </div>
+<!--        style="position: absolute; top: 45%; left: 80%; width: 150px;"-->
+        <!-- Start of Resume Template design -->
+
     <!-- End of Resume Template design -->
         
-    <button id="word_export" type="button" class="btn btn-primary">Download to Word (.doc) <i class="fa fa-download" aria-hidden="true"></i></button>
         
         
         <!-- Footer -->
