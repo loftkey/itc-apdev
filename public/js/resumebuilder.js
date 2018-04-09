@@ -34,7 +34,7 @@ $('#submitEdit').on('click', function () {
     let content = $(this).parent().parent().find('.modal-body');
     let inputs = content.find('.form-control');
     inputs = $('#editorDialog .modal-dialog .modal-content .modal-body .form-control');
-    let sect = $('.word-content').find('#' + current_section);
+    let sect = $('#' + current_section);
     
     inputs.each(function () {
         let inputSource = $(this);
