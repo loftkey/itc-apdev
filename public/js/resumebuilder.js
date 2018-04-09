@@ -75,19 +75,6 @@ $('#editorDialog').on('show.bs.modal', function (event) {
         bodytext = `<div class="form-group">
                       <div class="form-row">
                         <div class="col">
-                          <input type="text" data-fill="resume_skillset1" class="form-control" id="skillset1" placeholder="Skill Set #1">
-                        </div>
-                        <div class="col">
-                          <input type="text" data-fill="resume_skillset2" class="form-control" id="skillset2" placeholder="Skill Set #2">
-                        </div>
-                        <div class="col">
-                          <input type="text" data-fill="resume_skillset3" class="form-control" id="skillset3" placeholder="Skill Set #3">
-                        </div>
-                      </div>
-                      <hr>
-
-                      <div class="form-row">
-                        <div class="col">
                           <input type="text" data-fill="resume_skill1-1" class="form-control" id="skillset1-1" placeholder="skill 1">
                         </div>
                         <div class="col">
