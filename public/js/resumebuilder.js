@@ -197,7 +197,31 @@ $('#editorDialog').on('show.bs.modal', function (event) {
         current_section = "resume_projects";
         titletext = "Edit Your Projects";
         bodytext = `<div class="form-group">
-                      
+                      <div class="form-row">
+                        <div class="col">
+                          <input type="text" data-fill="resume_projplace1" class="form-control" placeholder="Project #1">
+                        </div>
+                        <div class="col">
+                          <input type="text" data-fill="resume_projdate1" class="form-control" placeholder="date">
+                        </div>
+                        <input type="text" data-fill="resume_projduties1" class="form-control form-row" placeholder="Your tasks">
+                        <input type="text" data-fill="resume_projresp1" class="form-control form-row" placeholder="Your responsibilities">
+                      </div>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="form-group">
+                      <div class="form-row">
+                        <div class="col">
+                          <input type="text" data-fill="resume_projplace2" class="form-control" placeholder="Project #2">
+                        </div>
+                        <div class="col">
+                          <input type="text" data-fill="resume_projdate2" class="form-control" placeholder="date">
+                        </div>
+                        <input type="text" data-fill="resume_projduties2" class="form-control form-row" placeholder="Your tasks">
+                        <input type="text" data-fill="resume_projresp2" class="form-control form-row" placeholder="Your responsibilities">
+                      </div>
                     </div>`;
     }
     let modal = $(this)
