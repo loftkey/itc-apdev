@@ -5,27 +5,19 @@
         <link rel="icon" href="./images/vicon.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!--		<link rel="stylesheet" href="css/main.css" />-->
+<!--		<link rel="stylesheet" href="assets/css/main.css" />-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <style>
-            div.polaroid {
-              width: 250px;
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-              text-align: center;
-                margin-bottom: 20px;
-            }
-        </style>
 	</head>
 	<body>
 		<!-- Header -->
             <nav class="navbar  navbar-expand-lg sticky-top navbar-light bg-light" >
-                <a class="navbar-brand" href="home.html"><b>Resume Builder</b></a>
+                <a class="navbar-brand" href="#"><b>Resume Builder</b></a>
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="home.html">Home</a>
-				    <a class="nav-item nav-link" href="faq.html">Faq</a>
-                    <a class="nav-item nav-link" href="contact.html">Contact</a>
-                    <a class="nav-item nav-link" href="about.html">About</a>
+                    <a class="nav-item nav-link active" href="#">Home</a>
+				    <a class="nav-item nav-link" href="#">Faq</a>
+                    <a class="nav-item nav-link" href="#">Contact</a>
+                    <a class="nav-item nav-link" href="#">About</a>
                 </div>
             </nav>
 			
@@ -39,22 +31,18 @@
                     <br>
 				</div>
                 <div class="container">
-                          <div class="row">
-                            <div class="col-sm">
-                                <div class="polaroid">
-                              <a href="resumebuilder.html?template=1"><img src="images/temp1.png" width="100%"/></a></div>
-                            </div>
-                            <div class="col-sm"><div class="polaroid">
-                              <a href="resumebuilder.html?template=2"><img src="images/temp2.png" width="100%"/></a></div>
-                            </div>
-                            <div class="col-sm"><div class="polaroid">
-                              <a href="resumebuilder.html?template=3"><img src="images/temp3.png" width="100%"/></a></div>
-                            </div>
-                            <div class="col-sm"><div class="polaroid">
-                              <a href="resumebuilder.html?template=4"><img src="images/temp4.png" width="100%"/></a></div>
-                            </div>
-                          </div>
+                      <div class="row">
+                        <div class="col-sm">
+                          <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp1.png" width="100%"/></a>
                         </div>
+                        <div class="col-sm">
+                          <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp2.png" width="100%"/></a>
+                        </div>
+                        <div class="col-sm">
+                          <a id="trigger_builder" type="button" data-toggle="modal" data-target="#dialog"><img src="images/temp3.png" width="100%"/></a>
+                        </div>
+                      </div>
+                    </div>
 
 			</section>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -62,19 +50,20 @@
 			
 			<div style="background-color:ghostwhite; text-align: center">
 				<br>
-                <h3>Resume Builder</h3>
+                <h3>Name</h3>
 				<p class="footer-links">
-					<a href="home.html">Home</a>
+					<a href="./index.html">Home</a>
                     .
-					<a href="faq.html">Faq</a>
+					<a href="./faq.html">Faq</a>
                     .
-                    <a href="contact.html">Contact</a>
-                    .
-					<a href="about.html">About</a>
+					<a href="./about.html">About</a>
 				</p>
-				<p class="footer-company-name">Resume Builder &copy; 2018</p>
-				<div class="footer-icons">					
-					<a target="_blank" href="https://github.com/loftkey/itc-apdev"><i class="fa fa-github"></i></a>
+				<p class="footer-company-name">Name &copy; 2018</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
 				</div>
                 <br><br><br><br>
 			</div>

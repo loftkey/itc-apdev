@@ -15,25 +15,4 @@
     height: 11in;
     margin: 5em auto;
     padding: 1in;
-    position: relative;
-}
-
-.editor-link {
-    position: absolute;
-    right: 1.2in;
-}
-
-.formButton{
-    width: 220px;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-#word_export {
-/*
-    position: absolute;
-    top: 55%; 
-    left: 80%; 
-*/
- width: 220px;
 }
